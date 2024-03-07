@@ -1,0 +1,54 @@
+TO PUSH YOUR CODE TO GITHUB ]
+
+- open github , click on new repository and create new .
+-open git bash in ur sys and n going to the folder whihc u want to push 
+    cmd: cd "C:\Users\aakan\OneDrive\Documents\Aakanksha\ReactWorkshop\Starting-from_scratch\react-workshop"
+	      $ git config --global user.name Aakanksha38
+			git config --global user.email "chippa.aakanksha.16ce1023@gmail.com"
+			 touch .gitignore
+			 git init
+			 git add .
+			 git commit -m "ur comment"
+			 git status #just to check
+			 git remote add origin add_ur_repo's_SSH_link
+			 
+			 
+			 
+			 click on SSH and copy link which is like this :: git@github.com:Aakanksha38/react-learnings.git
+			 keep the authentication , goto ur acc settings , click on SSH and GPG keys, click on new SSH, give the title and goto this link:https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+			 ssh-keygen -t ed25519 -C "your_email@example.com"
+			 
+			 =====
+			 ssh key 
+			 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICCUdaa63wuMkES2q1EebvSmPB9mFZOLoT7q1BmufrfJ chippa.aakanksha.16ce1023@gmail.com
+			  copy this key and paste it on add ssh key (on githb where it is asked for )
+			  =======
+			  
+			  git push origin master
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+===============
+few reference there in mail: aakankshachippa @gmail -id with subj as "git tutorial"
+
