@@ -29,7 +29,12 @@ TO PUSH YOUR CODE TO GITHUB ]
 			  
 			  
 			  
-			  
+======
+once u change/add any file , want to push 
+- git status  #to check what changes u have made 
+- git add .
+- git commit -m "ur comments"
+- git push origin master   
 			  
 			  
 			  
