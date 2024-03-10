@@ -119,6 +119,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<BookList/>)
 */
 
+/*
 
 import React from 'react';
 import  ReactDOM from 'react-dom/client';
@@ -161,8 +162,11 @@ function BookList  () {
       </div>
       
     </section>
-  )
+  );
 }
+
+*/
+
 
 //access props- 1
 /*
@@ -201,6 +205,7 @@ const Book =(props) => {
 }
 */
 
+/*
 //3rd way 
 //directly pass the props to function's parameter
 
@@ -218,6 +223,88 @@ const Book =({img,title,author,publishedYear,children}) => {
   );
   
 }
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<BookList/>)
+
+
+
+*/
+//=====================================PROPS ENDS===========================
+
+
+
+//what if we want to display 100 books or more ? , created 100 book objects with title,imh,author,etc.....thn ... but we can't write 100 times book comp inside bookList comp and pass props each time 
+// Soltuion :::  LIST 
+//
+import React from 'react';
+import  ReactDOM from 'react-dom/client';
+import './index.css';
+
+//SIMPLE LIST
+
+//creating array
+// const bookTitle = ['Atomic Habits','5am Club','Power of Habits','The Magic'];
+// const newBookTitle =bookTitle.map((title)=>{
+//   return <h1>{title}</h1>
+// });
+
+// const BookList =()=> {
+// return(
+//   <div>{newBookTitle}</div>
+// );
+// }
+
+//steps , 
+//1st create db(books obj) ,
+//2nd in main comp we wrote map functn,for each book we create -we retuned the book comp  n passed props inside it by passing book=book 
+//3rd - in book comp , pass props 
+const books=[
+  {
+  img : "https://m.media-amazon.com/images/I/71yu8CAKbgL._AC_UL480_FMwebp_QL65_.jpg",
+  author: "Robin Sharma",
+  title:"Who will cry when you will die"
+  },
+  {
+    img : "https://m.media-amazon.com/images/I/715qi-cIbML._AC_UL480_FMwebp_QL65_.jpg",
+    author: "Joseph Nguyen",
+    title:"Don't believe everything you think"
+    },
+    {
+      img : "https://m.media-amazon.com/images/I/61-hMfd7NGL._AC_UL480_FMwebp_QL65_.jpg",
+      author: "Morgan Housel",
+      title:"Psychology of Money"
+      }
+
+]
+
+function BookList (){
+  return(
+    <section className='bookList'>
+      {books.map((book,index)=>{
+        
+        // return(<Book book={book}/>)
+        return(<Book {...book} key={index}/>)
+      })}
+    </section>
+  )
+}
+
+// const Book =(props)=>{
+//   console.log(props);
+// }
+const Book = (props) => {
+  const {img,author,title}=props;  // grab img,auhor,title from props.book
+  return(
+    <div>
+      <img src={img} alt ="img"/>
+      <h2>{author}</h2>
+      <h2>{title}</h2>
+    </div>
+  )
+ }
+
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
