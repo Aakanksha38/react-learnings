@@ -238,6 +238,7 @@ root.render(<BookList/>)
 //what if we want to display 100 books or more ? , created 100 book objects with title,imh,author,etc.....thn ... but we can't write 100 times book comp inside bookList comp and pass props each time 
 // Soltuion :::  LIST 
 //
+/*
 import React from 'react';
 import  ReactDOM from 'react-dom/client';
 import './index.css';
@@ -272,6 +273,7 @@ const books=[
     title:"Don't believe everything you think"
     },
     {
+      //id:3
       img : "https://m.media-amazon.com/images/I/61-hMfd7NGL._AC_UL480_FMwebp_QL65_.jpg",
       author: "Morgan Housel",
       title:"Psychology of Money"
@@ -279,12 +281,19 @@ const books=[
 
 ]
 
+explaination for how this code works ::
+1st comes to booklist comp , we r useing map function to books obj . 
+when we are doing it , we get 1 book obj, to every obj we are returing book comp.
+for 1st book , we r returning book comp , in which we aare passing all the detail, when it does it -comes to book components n destructures all elements n shows on screen . 
+ 
+
 function BookList (){
   return(
     <section className='bookList'>
       {books.map((book,index)=>{
-        
+        //index or u can use id property in books obj 
         // return(<Book book={book}/>)
+        //for key , we were getting warning 
         return(<Book {...book} key={index}/>)
       })}
     </section>
@@ -307,5 +316,67 @@ const Book = (props) => {
 
 
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<BookList/>)
+*/
+
+
+//Events basics
+
+import React from 'react';
+import  ReactDOM  from 'react-dom/client';
+
+const books=[
+  {
+  img : "https://m.media-amazon.com/images/I/71yu8CAKbgL._AC_UL480_FMwebp_QL65_.jpg",
+  author: "Robin Sharma",
+  title:"Who will cry when you will die"
+  },
+  {
+    img : "https://m.media-amazon.com/images/I/715qi-cIbML._AC_UL480_FMwebp_QL65_.jpg",
+    author: "Joseph Nguyen",
+    title:"Don't believe everything you think"
+    },
+    {
+      //id:3
+      img : "https://m.media-amazon.com/images/I/61-hMfd7NGL._AC_UL480_FMwebp_QL65_.jpg",
+      author: "Morgan Housel",
+      title:"Psychology of Money"
+      }
+
+];
+function BookList (){
+  return(
+    <section className='bookList'>
+      {books.map((book,index)=>{
+        //index or u can use id property in books obj 
+        // return(<Book book={book}/>)
+        //for key , we were getting warning 
+        return(<Book {...book} key={index}/>)
+      })}
+    </section>
+  );
+}
+//simple onClick
+const Book = (props) => {
+  const {img,author,title}=props;  // grab img,auhor,title from props.book
+  const onclick =()=>{
+    //console.log(e);
+    alert("Hi, Book is availble to place your order");
+  }
+  const onHandler =(title)=>{
+    console.log(`Book with title ${title} has been added to your cart.`);
+    window.confirm(`Are you sure ,Book with title ${title} will be added o your cart.`);
+  }
+  return(
+    <div className='book'>
+      <img src={img} alt ="img" onClick={()=> console.log("title:",title)}/>
+      <h4 >Author : {author}</h4>
+      <h1 onClick={()=> console.log(title)}>Title: {title}</h1>
+      <button onClick={onclick}>Check Book Availability</button>
+      <button onClick={()=>{onHandler(title)}}>Add to Cart</button>
+    </div>
+  );
+ }
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<BookList/>)
