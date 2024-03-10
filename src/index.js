@@ -320,6 +320,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<BookList/>)
 */
 
+/*
 
 //Events basics
 
@@ -380,3 +381,6 @@ const Book = (props) => {
  }
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<BookList/>)
+
+//COMPLETION OF CHAP-2
+*/
