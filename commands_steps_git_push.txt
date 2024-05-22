@@ -16,7 +16,7 @@ TO PUSH YOUR CODE TO GITHUB ]
 			 
 			 click on SSH and copy link which is like this :: git@github.com:Aakanksha38/react-learnings.git
 			 keep the authentication , goto ur acc settings , click on SSH and GPG keys, click on new SSH, give the title and goto this link:https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-			 ssh-keygen -t ed25519 -C "your_email@example.com"
+			 ssh-keygen -t ed25519 -C "chippa.aakanksha.16ce1023@gmail.com"
 			 
 			 =====
 			 ssh key 
@@ -56,4 +56,26 @@ once u change/add any file , want to push
 			  
 ===============
 few reference there in mail: aakankshachippa @gmail -id with subj as "git tutorial"
+========================
 
+“Local branches”:type git branch, 
+$ git branch
+         debian
+         server
+       * master
+	   
+Remote-tracking branches : git branch -r, 
+ $ git branch -r
+       cognac/master
+       fruitfly/server
+       origin/albert
+       origin/ant
+       origin/contrib
+       origin/cross-compile
+	   
+If you’re interested in how these branches are stored locally, look at the files in:
+
+.git/refs/heads/ [for local branches]
+.git/refs/remotes/ [for tracking branches]
+
+http://longair.net/blog/2009/04/16/git-fetch-and-merge/
