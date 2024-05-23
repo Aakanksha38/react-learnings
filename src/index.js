@@ -281,18 +281,19 @@ const books=[
 
 ]
 
-explaination for how this code works ::
-1st comes to booklist comp , we r useing map function to books obj . 
-when we are doing it , we get 1 book obj, to every obj we are returing book comp.
-for 1st book , we r returning book comp , in which we aare passing all the detail, when it does it -comes to book components n destructures all elements n shows on screen . 
+//explaination for how this code works ::
+//1st comes to booklist comp , we r useing map function to books obj . 
+//when we are doing it , we get 1 book obj, to every obj we are returing book comp.
+//for 1st book , we r returning book comp , in which we aare passing all the detail, when it does it -comes to book components n destructures all elements n shows on screen . 
  
 
 function BookList (){
   return(
     <section className='bookList'>
       {books.map((book,index)=>{
+        //const {img,author,title} = book;
         //index or u can use id property in books obj 
-        // return(<Book book={book}/>)
+         //return(<Book book={book}/>)
         //for key , we were getting warning 
         return(<Book {...book} key={index}/>)
       })}
@@ -304,7 +305,8 @@ function BookList (){
 //   console.log(props);
 // }
 const Book = (props) => {
-  const {img,author,title}=props;  // grab img,auhor,title from props.book
+  //const {img,author,title}=props.book;  // grab img,auhor,title from props.book
+  const {img,author,title}=props;
   return(
     <div>
       <img src={img} alt ="img"/>
