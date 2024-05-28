@@ -1,0 +1,25 @@
+import nameStand from '../src/img/nameStand.jpg';
+import pendent from '../src/img/floralPendent.jpg';
+import fiveFrame from '../src/img/Five_inch_Frame.jpg';
+export const listOfProducts=[
+  {
+  pId: 1,
+  pImg : nameStand,
+  pName: "Umbilical Cord preservation into name initials+4' frame",
+  pPrice:1000
+  },
+  {
+    pId:2,
+    pImg : fiveFrame,
+    pName: "5 inch heart shape frame",
+    pPrice:900
+    },
+    {
+      pIdd:3,
+      pImg:pendent,
+      pName: "Real Flower Pendent",
+      pPrice:250
+
+      }
+
+];

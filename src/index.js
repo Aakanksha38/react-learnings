@@ -38,49 +38,6 @@ root.render(<Greeting/>);
 */
 
 
-/*
-import React from 'react';
-import  ReactDOM  from 'react-dom/client';
-import nameStandImg from './img/nameStand.jpg';
-import './index.css';  //outline styling (css)
-const Catalogue =()=>{
-  return <div className='catalogue'>
-    <h1>Let's create webPage for my small business!</h1>
-    <Frames></Frames>
-    <Frames></Frames>
-  </div>
-};
-
-const Frames = () => {
-  return(
-    <section className='frame'>
-      <Image></Image>
-      <ProductName></ProductName>
-      <ProductPrice></ProductPrice>
-    </section>
-  )
-}
-const ProductPrice = () => {
-  return <h2>Price: 1000Rs</h2>
-}
-const ProductName = () => {
-  return <h3 style={{color: "rgb(37, 29, 20)" ,fontSize:"1.25rem"}}>Name: 6 inch heart shape frame</h3>;
-};
-const Image =()=> {
-  return (
-    <img
-    src={nameStandImg}
-    alt='5inch_frame'
-    width={400}
-    height={300}
-    />
-  )
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Catalogue/>);
-*/
-
 
 // Chapter =====2 
 
@@ -394,7 +351,7 @@ root.render(<BookList/>)
 
 //-------------------------TASK- 1----------------------------//
 
-
+/*
 import React from 'react';
 import  ReactDOM  from 'react-dom/client';
 
@@ -449,6 +406,62 @@ const Book = (props) => {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<BookList/>)
 
+*/
 //-------------------------TASK-1 COMPLETE--------------------------///
 
 //start wth task assigned 
+
+
+/*
+import React from 'react';
+import  ReactDOM  from 'react-dom/client';
+import nameStandImg from './img/nameStand.jpg';
+import floralPendent from './img/floralPendent.jpg';
+import './index.css';  //outline styling (css)
+const Catalogue =()=>{
+  return <div className='catalogue'>
+    <h1>Let's create webPage for my small business!</h1>
+    <Frames></Frames>
+    <Frames></Frames>
+  </div>
+};
+
+const Frames = () => {
+  return(
+    <section className='frame'>
+      <Image></Image>
+      <ProductName></ProductName>
+      <ProductPrice></ProductPrice>
+    </section>
+  )
+}
+const ProductPrice = () => {
+  return <h2>Price: 1000Rs</h2>
+}
+const ProductName = () => {
+  return <h3 style={{color: "rgb(37, 29, 20)" ,fontSize:"1.25rem"}}>Name: 6 inch heart shape frame</h3>;
+};
+const Image =()=> {
+  return (
+    <img
+    src={nameStandImg}
+    alt='5inch_frame'
+    width={400}
+    height={300}
+    />
+  )
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Catalogue/>);
+*/
+
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App'
+
+const container = document.getElementById('root')
+const root = createRoot(container)
+root.render(<App tab='home' />)
+
