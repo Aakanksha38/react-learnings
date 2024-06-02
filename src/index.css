@@ -129,6 +129,7 @@ p {
     line-height: 1;
   }
 }
+
 /*  global classes */
 
 /* section */
@@ -144,7 +145,40 @@ p {
     width: 95vw;
   }
 }
+.homePage img {
+  
+  
+  margin: 0 auto;
+  
+    width:  300px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #140202;
+    display: table;
+  clear: both;
+  
 
+
+}
+/* css for homepage*/
+.homePage {
+  background: var(--clr-white);
+  justify-content: space-between;
+  text-align: center;
+  max-width: var(--fixed-width);
+  margin: 2rem auto;
+  align-items: center;
+  border-radius: var(--radius);
+}
+.homePage {
+  padding: 1rem 2rem;
+}
+.homePage h4 {
+  margin-bottom: 0;
+}
+.homePage p {
+  margin-bottom: 0;
+}
 .container {
   text-align: center;
   margin-top: 5rem;
@@ -178,6 +212,8 @@ p {
   align-items: center;
   border-radius: var(--radius);
 }
+
+
 .item button,
 .item a {
   background: transparent;
