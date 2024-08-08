@@ -132,6 +132,9 @@ p {
 
 /*  global classes */
 
+/* section */
+.section,
+
 .homePage img {
   
   
@@ -156,11 +159,20 @@ p {
   margin: 2rem auto;
   align-items: center;
   border-radius: var(--radius);
+}
+.homePage {
   padding: 1rem 2rem;
 }
-
-
-
+.homePage h4 {
+  margin-bottom: 0;
+}
+.homePage p {
+  margin-bottom: 0;
+}
+.container {
+  text-align: center;
+  margin-top: 5rem;
+}
 .btn {
   display: inline-block;
   background: var(--clr-primary-5);
