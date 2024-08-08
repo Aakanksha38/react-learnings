@@ -11,6 +11,9 @@ const HomePage = () => {
   If listOfProducts is already an array, this will create a nested array, 
   which is likely not what you intended.
   console.log(products)*/
+  if (!Array.isArray(products) || products.length === 0) {
+    return <p>No products available</p>;
+  }  // to check array called products contain any elements or not -- it will check whether its an arraay or not thn it will check for length
   const removeAllProducts = () =>{
     if(products.length !== 0){
       window.confirm(`Are you sure ,you want to remove all the products?`);
